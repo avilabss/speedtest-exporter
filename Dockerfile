@@ -1,7 +1,7 @@
 FROM python:3.10.4-alpine3.15
 
 ARG SPEEDTEST_VERSION=1.2.0
-RUN adduser -D speedtest
+# RUN adduser -D speedtest
 
 WORKDIR /app
 COPY . .
