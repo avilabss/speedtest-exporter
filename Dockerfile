@@ -6,6 +6,7 @@ RUN adduser -D speedtest
 WORKDIR /app
 COPY . .
 
+RUN apk add --no-cache wget
 RUN ARCHITECTURE=$(uname -m) && \
     export ARCHITECTURE && \
     if [ "$ARCHITECTURE" = 'armv7l' ];then ARCHITECTURE="armhf";fi && \
