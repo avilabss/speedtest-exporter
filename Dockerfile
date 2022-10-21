@@ -6,7 +6,8 @@ ARG SPEEDTEST_VERSION=1.2.0
 WORKDIR /app
 COPY . .
 
-RUN apk add wget tar
+# RUN apk add wget tar
+RUN pip3 install -r requirements.txt
 RUN ARCHITECTURE=$(uname -m) && \
     export ARCHITECTURE && \
     if [ "$ARCHITECTURE" = 'armv7l' ];then ARCHITECTURE="armhf";fi && \
@@ -18,7 +19,5 @@ RUN ARCHITECTURE=$(uname -m) && \
      /tmp/* \
      /app/requirements
 
-RUN pip3 install -r requirements.txt
-USER speedtest
-# CMD [ "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000" ]
+# USER speedtest
 CMD [ "python3", "main.py" ]
