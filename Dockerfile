@@ -1,12 +1,11 @@
 FROM python:3.10.4-alpine3.15
 
 ARG SPEEDTEST_VERSION=1.2.0
-# RUN adduser -D speedtest
+RUN adduser -D speedtest
 
 WORKDIR /app
 COPY . .
 
-# RUN apk add wget tar
 RUN pip3 install -r requirements.txt
 RUN ARCHITECTURE=$(uname -m) && \
     export ARCHITECTURE && \
@@ -19,5 +18,5 @@ RUN ARCHITECTURE=$(uname -m) && \
      /tmp/* \
      /app/requirements
 
-# USER speedtest
+USER speedtest
 CMD [ "python3", "main.py" ]
