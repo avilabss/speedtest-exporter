@@ -383,7 +383,7 @@
                     "displayMode": "list",
                     "placement": "right",
                     "showLegend": true,
-                    "width": 16
+                    "width": 100
                 },
                 "tooltip": {
                     "mode": "single",
@@ -429,13 +429,13 @@
         "list": []
     },
     "time": {
-        "from": "now-12h",
+        "from": "now-6h",
         "to": "now"
     },
     "timepicker": {},
     "timezone": "",
     "title": "Speedtest",
     "uid": "RAc0UeSVz",
-    "version": 4,
+    "version": 5,
     "weekStart": ""
 }
