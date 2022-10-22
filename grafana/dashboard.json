@@ -24,14 +24,14 @@
     "editable": true,
     "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
-    "id": 2,
+    "id": 1,
     "links": [],
     "liveNow": false,
     "panels": [
         {
             "datasource": {
                 "type": "prometheus",
-                "uid": "sRyoy6S4k"
+                "uid": "kjgi4iNVz"
             },
             "fieldConfig": {
                 "defaults": {
@@ -43,7 +43,7 @@
                     "max": 100000000,
                     "min": 1000000,
                     "thresholds": {
-                        "mode": "absolute",
+                        "mode": "percentage",
                         "steps": [
                             {
                                 "color": "red",
@@ -107,7 +107,7 @@
         {
             "datasource": {
                 "type": "prometheus",
-                "uid": "sRyoy6S4k"
+                "uid": "kjgi4iNVz"
             },
             "fieldConfig": {
                 "defaults": {
@@ -119,7 +119,7 @@
                     "max": 100000000,
                     "min": 1000000,
                     "thresholds": {
-                        "mode": "absolute",
+                        "mode": "percentage",
                         "steps": [
                             {
                                 "color": "red",
@@ -180,7 +180,7 @@
         {
             "datasource": {
                 "type": "prometheus",
-                "uid": "sRyoy6S4k"
+                "uid": "kjgi4iNVz"
             },
             "fieldConfig": {
                 "defaults": {
@@ -189,8 +189,10 @@
                     },
                     "decimals": 2,
                     "mappings": [],
+                    "max": 20,
+                    "min": 0.01,
                     "thresholds": {
-                        "mode": "absolute",
+                        "mode": "percentage",
                         "steps": [
                             {
                                 "color": "green",
@@ -198,7 +200,7 @@
                             },
                             {
                                 "color": "red",
-                                "value": 5
+                                "value": 50
                             }
                         ]
                     },
@@ -243,7 +245,7 @@
         {
             "datasource": {
                 "type": "prometheus",
-                "uid": "sRyoy6S4k"
+                "uid": "kjgi4iNVz"
             },
             "fieldConfig": {
                 "defaults": {
@@ -252,8 +254,10 @@
                     },
                     "decimals": 2,
                     "mappings": [],
+                    "max": 20,
+                    "min": 0.01,
                     "thresholds": {
-                        "mode": "absolute",
+                        "mode": "percentage",
                         "steps": [
                             {
                                 "color": "green",
@@ -261,7 +265,7 @@
                             },
                             {
                                 "color": "red",
-                                "value": 2
+                                "value": 50
                             }
                         ]
                     },
@@ -306,7 +310,7 @@
         {
             "datasource": {
                 "type": "prometheus",
-                "uid": "sRyoy6S4k"
+                "uid": "kjgi4iNVz"
             },
             "fieldConfig": {
                 "defaults": {
@@ -431,6 +435,6 @@
     "timezone": "",
     "title": "Speedtest",
     "uid": "RAc0UeSVz",
-    "version": 31,
+    "version": 3,
     "weekStart": ""
 }
