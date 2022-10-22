@@ -4,3 +4,4 @@ grafana
 Dockerfile
 Pipfile
 Pipfile.lock
+docker-compose.yml

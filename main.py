@@ -106,29 +106,15 @@ def record_speedtest():
     speedtest_server = os.getenv("SPEEDTEST_SERVER", None)
     speedtest_run_timeout = int(os.getenv("SPEEDTEST_RUN_TIMEOUT", 90))
 
-    log.info("Generating and Recording metrics for speedtest.")
-
     if time.time() > speedtest_cache_timeout:
-        log.info("Cache timeout, Processing new results.")
-
         r_server, r_jitter, r_ping, r_download, r_upload, r_status = run_speedtest(speedtest_server, speedtest_run_timeout)
+        log.info(f"Server={r_server} Jitter={r_jitter}ms Ping={r_ping}ms Download={bits_to_megabits(r_download)} Upload - {bits_to_megabits(r_upload)}")
 
-        log.info(f"Server - {str(r_server)}") 
-        server.set(r_server)
-        
-        log.info(f"Jitter - {str(r_jitter)}") 
+        server.set(r_server)        
         jitter.set(r_jitter)
-        
-        log.info(f"Ping - {str(r_ping)}") 
         ping.set(r_ping)
-        
-        log.info(f"Download - {str(r_download)}") 
         download_speed.set(r_download)
-        
-        log.info(f"Upload - {str(r_upload)}") 
         upload_speed.set(r_upload)
-        
-        log.info(f"Status - {str(r_status)}")
         status.set(r_status)
 
         speedtest_cache_timeout = time.time() + cache_timeout
