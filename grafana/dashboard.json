@@ -336,11 +336,11 @@
                             "fill": "solid"
                         },
                         "lineWidth": 2,
-                        "pointSize": 1,
+                        "pointSize": 2,
                         "scaleDistribution": {
                             "type": "linear"
                         },
-                        "showPoints": "never",
+                        "showPoints": "always",
                         "spanNulls": true,
                         "stacking": {
                             "group": "A",
@@ -386,7 +386,7 @@
                     "width": 100
                 },
                 "tooltip": {
-                    "mode": "single",
+                    "mode": "multi",
                     "sort": "none"
                 }
             },
@@ -429,13 +429,13 @@
         "list": []
     },
     "time": {
-        "from": "now-6h",
+        "from": "now-24h",
         "to": "now"
     },
     "timepicker": {},
     "timezone": "",
     "title": "Speedtest",
     "uid": "RAc0UeSVz",
-    "version": 5,
+    "version": 7,
     "weekStart": ""
 }
