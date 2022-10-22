@@ -108,7 +108,7 @@ def record_speedtest():
 
     if time.time() > speedtest_cache_timeout:
         r_server, r_jitter, r_ping, r_download, r_upload, r_status = run_speedtest(speedtest_server, speedtest_run_timeout)
-        log.info(f"Server={r_server} Jitter={r_jitter}ms Ping={r_ping}ms Download={bits_to_megabits(r_download)} Upload - {bits_to_megabits(r_upload)}")
+        log.info(f"Server={r_server} Jitter={r_jitter}ms Ping={r_ping}ms Download={bits_to_megabits(r_download)} Upload={bits_to_megabits(r_upload)}")
 
         server.set(r_server)        
         jitter.set(r_jitter)
