@@ -63,7 +63,7 @@
                             }
                         ]
                     },
-                    "unit": "Bps"
+                    "unit": "bps"
                 },
                 "overrides": []
             },
@@ -139,7 +139,7 @@
                             }
                         ]
                     },
-                    "unit": "Bps"
+                    "unit": "bps"
                 },
                 "overrides": []
             },
@@ -436,6 +436,6 @@
     "timezone": "",
     "title": "Speedtest",
     "uid": "RAc0UeSVz",
-    "version": 7,
+    "version": 8,
     "weekStart": ""
 }
